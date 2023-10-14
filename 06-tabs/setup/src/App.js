@@ -1,3 +1,4 @@
+// FInal Code
 import React, { useState, useEffect } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 // ATTENTION!!!!!!!!!!
