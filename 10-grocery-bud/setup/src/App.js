@@ -7,12 +7,16 @@ function App() {
 	const [list, setList] = useState([]);
 	const [isEditing, setIsEditing] = useState(false);
 	const [editId, setEditId] = useState(null);
-	const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
+	const [alert, setAlert] = useState({
+		show: false,
+		msg: " ",
+		type: "",
+	});
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (!name) {
-			//Alert
+			showAlert(true, "danger", "Please enter a task");
 		} else if (name && isEditing) {
 			//Alert to edit
 		} else {
@@ -22,10 +26,15 @@ function App() {
 			setName("");
 		}
 	};
+
+	const showAlert = (show = false, type = "", msg = "") => {
+		setAlert({ show, type, msg });
+	};
+
 	return (
 		<section className="section-center">
 			<form className="grocery-form" onSubmit={handleSubmit}>
-				{alert.show && <Alert />}
+				{alert.show && <Alert {...alert} removeAlert={showAlert} />}
 				<h3>To Do List</h3>
 				<div className="form-control">
 					<input
