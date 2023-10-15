@@ -18,9 +18,8 @@ function App() {
 		if (!name) {
 			showAlert(true, "danger", "Please enter a task");
 		} else if (name && isEditing) {
-			//Alert to edit
+			showAlert(true, "success", "Task added to the list");
 		} else {
-			//show the alert
 			const newItem = { id: new Date().getTime().toString(), title: name };
 			setList([...list, newItem]);
 			setName("");
@@ -31,11 +30,21 @@ function App() {
 		setAlert({ show, type, msg });
 	};
 
+	const clearList = () => {
+		showAlert(true, "dander", "empty list");
+		setList([]);
+	};
+
+	const removeItem = (id) => {
+		showAlert(true, "danger", "Task Removed");
+		setList(list.filter((item) => item.id !== id));
+	};
+
 	return (
 		<section className="section-center">
 			<form className="grocery-form" onSubmit={handleSubmit}>
-				{alert.show && <Alert {...alert} removeAlert={showAlert} />}
-				<h3>To Do List</h3>
+				{alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
+				<h3>ToDo List</h3>
 				<div className="form-control">
 					<input
 						type="text"
@@ -51,8 +60,10 @@ function App() {
 			</form>
 			{list.length > 0 && (
 				<div className="grocery-container">
-					<List items={list} />
-					<button className="clear-btn">Clear Items</button>
+					<List items={list} removeItem={removeItem} />
+					<button className="clear-btn" onClick={clearList}>
+						Clear Tasks
+					</button>
 				</div>
 			)}
 		</section>
