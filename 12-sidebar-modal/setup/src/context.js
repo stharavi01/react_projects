@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-
+// New features added
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
