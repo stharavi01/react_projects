@@ -11,6 +11,10 @@ function App() {
 	return (
 		<div>
 			<h2>app component</h2>
+			<hr />
+			<h3>
+				<Home />
+			</h3>
 		</div>
 	);
 }
