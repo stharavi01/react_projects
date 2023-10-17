@@ -11,19 +11,6 @@ function App() {
 	return (
 		<div>
 			<h2>app component</h2>
-			<h4>hello world</h4>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-				doloremque id consequatur minus enim similique obcaecati accusantium
-				placeat nobis mollitia nam, quos repudiandae quo magnam maxime
-				architecto reiciendis neque unde.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-				doloremque id consequatur minus enim similique obcaecati accusantium
-				placeat nobis mollitia nam, quos repudiandae quo magnam maxime
-				architecto reiciendis neque unde.
-			</p>
 		</div>
 	);
 }
