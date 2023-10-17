@@ -16,6 +16,7 @@ function App() {
 				<Home />
 			</h3>
 			<About />
+			<Contact />
 		</div>
 	);
 }
