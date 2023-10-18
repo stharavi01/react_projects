@@ -7,7 +7,6 @@ import SingleCocktail from "./pages/SingleCocktail";
 import Error from "./pages/Error";
 // import components
 import Navbar from "./components/Navbar";
-import Cocktail from "./components/Cocktail";
 function App() {
 	return (
 		<Router>
@@ -15,7 +14,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
-				<Route path="/cocktail/:id" element={<Cocktail />} />
+				<Route path="/cocktail/:id" element={<SingleCocktail />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</Router>
