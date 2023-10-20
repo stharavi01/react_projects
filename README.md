@@ -14,7 +14,6 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 [Projects Site](https://react-projects.netlify.app/)
 
-## Corresponding Tutorial Topics
 
 #### useState
 
