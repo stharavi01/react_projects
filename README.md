@@ -10,7 +10,6 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 
 [React Tutorial](https://youtu.be/iZhV0bILFb0)
 
-#### All Projects
 
 [Projects Site](https://react-projects.netlify.app/)
 
